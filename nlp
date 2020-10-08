@@ -1,0 +1,171 @@
+parse text
+find information 
+classify text docs
+search
+sentinment
+topic modelling
+------------------
+
+text.split(' ')
+text.istitle() isupper() islower()
+
+isalpha()
+isdigit()
+isalnum() alpha numeric
+
+str.lower() upper() titlecase() 
+.spit() .splitlines()
+str.join(arr)
+str.strip() rstrip() from front , from back
+str.find() rfind()
+
+
+word.endswith()
+
+list(str): get all characters
+
+f = open("hah.txt", 'r')
+f.readlines()
+f.readline()
+
+--------------
+
+f.seek(0)
+
+y = f.readline()
+y.rsplit() to remove characters.
+-------------------------------------
+
+callouts 
+--------
+
+1) [ w for w in text11 if re.search('@[a-zA-Z0-9_]+', w)]
+
+. single char
+^ start of string
+$ end
+[a-z] inside the brackets
+[^a-z] not in
+a|b or
+() scoping
+\ special chars
+\b word boundary
+\d any digit
+\D not digit
+\s aNY WHITESPACE
+\S any non whitespace
+\w alpha numeric
+* matches zero or more accurences
++ matches one or moew accurences
+? machets zero or one
+{n} n times
+{n,m} n to m times
+{n,} n to greater
+
+------------------------------------------------------------
+re.findall(r'[aeiou]')
+
+re.findall(r'(?:Jan|Feb|)[a-z]* \d{4}') ....
+
+pandas
+-------
+
+df['text'].str.len()
+df['text'].str.split().str.len()
+df['text'].str.contains('Me')
+df['text'].str.count(r'\d')
+df['text'].str.findall(r'\d')
+df['text'].str.findall(r'(\d?\d):(\d\d)') // find time
+df['text'].str.replace(r'\w+day\b', '???')
+df['text'].str.replace(r'(\w+day\b)', lambda x: x.groups()[0][:3]) get first three letters of the string
+df['text'].str.extract(r'(\d?\d):(\d\d)') creates df from groups
+
+
+df['text'].str.extractall(r'((\d?\d):(\d\d) ?([ap]m)')
+
+df['text'].str.extractall(r'(?P<time>(?P<hour>\d?\d):(?P<minutes>\d\d) ?(?P<Period>[ap]m)')
+
+tweet = original_tweet.decode("utf8").encode(‘ascii’,’ignore’)
+
+---------------------------------------------------------------------
+
+
+https://docs.python.org/3/library/re.html
+https://www.analyticsvidhya.com/blog/2014/11/text-data-cleaning-steps-python/
+http://ieva.rocks/2016/08/07/cleaning-text-for-nlp/
+
+
+
+
+392
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
